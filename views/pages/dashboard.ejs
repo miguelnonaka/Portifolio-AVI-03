@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard do Portfólio</title>
+  <link rel="stylesheet" href="/style/dashboard.css">
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+
+  <main class="container">
+    <h2>Dashboard do Portfólio</h2>
+
+    <section class="collum">
+      <div class="box">
+        <h3>Disciplinas</h3>
+        <p>Total: <%= estatisticas.totalDisciplinas %></p>
+      </div>
+
+      <div class="box">
+        <h3>Projetos</h3>
+        <p>Total: <%= estatisticas.totalProjetos %></p>
+        <p>Concluídos: <%= estatisticas.concluidos %></p>
+        <p>Em andamento: <%= estatisticas.emAndamento %></p>
+      </div>
+
+      <div class="box">
+        <h3>Tecnologias Mais Usadas</h3>
+        <ul class="list">
+          <% estatisticas.tecnologiasMaisUsadas.forEach(function(tecnologia) { %>
+            <li><%= tecnologia %></li>
+          <% }) %>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

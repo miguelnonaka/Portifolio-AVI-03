@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disciplinas - Miguel Nonaka</title>
+  <link rel="stylesheet" href="/style/disciplinas.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+
+  <main class="container">
+    <div class="section-header">
+      <h2>Minhas Disciplinas</h2>
+    </div>
+
+    <div class="disciplinas-container">
+      <% disciplinas.forEach(function(disciplina){ %>
+        <div class="disciplina-card">
+          <span class="disciplina-nome"><%= disciplina.nome %></span>
+          <div class="disciplina-actions">
+            <form action="/disciplinas/<%= disciplina.id %>?_method=PUT" method="POST">
+              <input type="text" name="nome" placeholder="Editar disciplina" required />
+              <button type="submit">Editar</button>
+            </form>
+            <form action="/disciplinas/<%= disciplina.id %>?_method=DELETE" method="POST">
+              <button type="submit">Excluir</button>
+            </form>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+
+    <section class="add-disciplina">
+      <h3>Adicionar nova disciplina</h3>
+      <form action="/disciplinas" method="POST">
+        <input type="text" name="nome" placeholder="Nome da disciplina" required />
+        <button type="submit">Adicionar</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nome": "Programação orientada objeto"
+  },
+  {
+    "id": 2,
+    "nome": "Algoritmos de lógica e programação"
+  },
+  {
+    "id": 3,
+    "nome": "Design Digital"
+  },
+  {
+    "id": 4,
+    "nome": "Modelagem de Banco de dados"
+  },
+  {
+    "id": 5,
+    "nome": "Sistemas Operacionais e Redes de Computadores"
+  },
+  {
+    "id": 6,
+    "nome": "Programação Web I"
+  },
+  {
+    "id": 7,
+    "nome": "Programação Web II"
+  },
+  {
+    "id": 8,
+    "nome": "Estrutura de Dados"
+  },
+  {
+    "id": 9,
+    "nome": "Matemática para Computação"
+  },
+  {
+    "id": 10,
+    "nome": "Banco de Dados - Relacional"
+  },
+  {
+    "id": 11,
+    "nome": "Engenharia de Software I"
+  },
+  {
+    "id": 12,
+    "nome": "Engenharia de Software II"
+  }
+]

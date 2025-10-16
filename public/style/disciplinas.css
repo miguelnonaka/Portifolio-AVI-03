@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(to bottom, #0f172a, #1e293b);
+    color: #f1f5f9;
+}
+
+header {
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 4px solid #1e40af;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 2rem 1rem;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    background-color: #0f172a;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    color: #7dd3fc;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.disciplinas-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.disciplina-card {
+    background-color: #1e293b;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.disciplina-card:hover {
+    transform: translateY(-5px);
+    background-color: #273449;
+}
+
+.disciplina-nome {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.disciplina-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.disciplina-actions form {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.disciplina-actions input {
+    flex: 1;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.disciplina-actions button {
+    background-color: #0ea5e9;
+    border: none;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.disciplina-actions button:hover {
+    background-color: #0284c7;
+}
+
+.add-disciplina {
+    margin-top: 2rem;
+}
+
+.add-disciplina input {
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.add-disciplina button {
+    background-color: #0ea5e9;
+    border: none;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.add-disciplina button:hover {
+    background-color: #0284c7;
+}
+
+@media (max-width: 600px) {
+    .disciplinas-container {
+        grid-template-columns: 1fr;
+    }
+}

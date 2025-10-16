@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projetos - Miguel Nonaka</title>
+  <link rel="stylesheet" href="style/projetos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <%- include('../partials/navbar') %>
+  <main class="container">
+    <div class="section-header">
+        <h2>Meus Projetos</h2>
+    </div>
+    <section>
+        <% projetos.forEach(function(projeto){%>
+            <div class="project">
+                <div class="project-text">
+                    <h3><%= projeto.nome %></h3>
+                    <p><strong>Descrição:</strong> <%= projeto.descricao %></p>
+                    <p><strong>Minha participação:</strong> <%= projeto.participacao %></p>
+                </div>
+                <% if (projeto.imagem) { %>
+                    <img src="<%= projeto.imagem %>" alt="<%= projeto.nome %>" class="project-img"/>
+                <% } %>
+            </div>
+       <% }) %>
+    </section>
+  </main>
+</body>
+</html>
